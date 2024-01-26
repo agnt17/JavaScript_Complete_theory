@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body class="body">
+    <div class="parent1">
+        Aditya Gupta
+    </div>
+    <div class="parent2">
+        Anurag Khokhar
+    </div>
+    <div class="parent3">
+        Animesh Kushwaha
+    </div>
+    <div class="output"></div>
+</body>
+<script>
+
+// <!-- Events in js--------->
+
+// In JavaScript, events are actions or occurrences that happen in the browser, such as a user clicking a button, resizing the window, or submitting a form.Handling events allows you to respond to user interactions and build dynamic and interactive web applications-- >
+
+const output = document.querySelector('.output');
+document.querySelector('.parent1').addEventListener('click' ,(e)=>{
+    const x = e.clientX;
+    const y = e.clientY;
+    output.outerHTML = `${x} and ${y}`
+}, false) // as soon as u click on the name then u will get a event clicked 
+
+
+// we just discussed a particular type of usecase of the event...but we need only a few to explore
+//type, timstamp, defaultPrevented , target, toElement, srcElement, clientX,Y , screenX,Y, altKey, controlKey, shiftKey,  keyCode
+
+// Concept of Bubbling -----> Bubble goes from down to up so means the properties that are children to any particular properties are executed first. 
+// In JavaScript, event bubbling is one phase of the event propagation model in the Document Object Model (DOM). Event propagation refers to the way events travel through the DOM hierarchy, from the target element up or down through its ancestors or descendants.
+//means parent is child of body so that content inside parent will be executed first then the body content will get executed.
+
+// *****************for bubbling : put false ***********************
+
+//concept of Capturing : Just opposite of bubbling ....here parent properties are executed firstly and then children properties are executed.
+
+//*****************for capturing : put true ************************
+
+//stopPropogation ------> this is used so that event do not get transmiited or if we just wanted to to stop the propogation.
+
+
+// if we want to delete any element by clicking on it.
+
+// document.querySelector('.body').addEventListener('click' , (e) => {
+//     const removeElement = e.target.parentNode;
+//     removeElement.remove();
+// })
+
+// now if we dont want on a click all elements get remove we have to set if else condition
+
+document.querySelector('.body').addEventListener('click' , (e) => {
+    const removeElement = e.target.parentNode;
+    if(e.target.tagName === 'parent1'){removeElement.remove();}
+    removeElement.remove();
+})
+
+</script>
+
+</html>

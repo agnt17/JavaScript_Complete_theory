@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click this Button</button>
+</body>
+
+<script>
+    //Bind function in javascript:
+
+    // The basic idea behind bind. It allows you to make a copy of a function with a specific this context. This can be helpful when you have functions that rely on the value of this, especially in the context of objects.
+
+    class React {
+        constructor() {
+            this.username = "React"
+            this.server = "https://localhost:3000/";
+
+            document.querySelector('button').addEventListener('click',this.handleClick.bind(this)) // now if we dont use bind here then we dont get the access of the server, bind says to bind the methods inside the function so that we can use them.
+        }
+        handleClick(){
+            console.log("Button Clicked");
+            console.log(this.server);
+        }
+        
+
+    }
+
+    const Button = new React()
+</script>
+
+</html>

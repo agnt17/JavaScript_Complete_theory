@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:aliceblue;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <!-- yha pr actual jo tree bnta hai vo bhut hi complex hota hai agar normally dekhe to parent ke total 4 children hai isn't it but agar isi cheez ko print krke dekhe to kuch jada hi elements hai jaise 4 to visible child ho gye or bache hue jo 5 line breaks hai vo bhi isi parent ke child hai...thus total me parent ke 9 childrens hai.  -->
+    </div>
+</body>
+<script>
+    const myParent = document.querySelector('.parent')
+    console.log(myParent.children) // this will give a HTMLCollection 
+
+    console.log(myParent.firstElementChild) // very imp property gives the first child of the parent.
+    console.log(myParent.lastElementChild) // very imp property gives the last child of the parent.
+    console.log(myParent.nextElementSibling) //very imp property gives the nextsibling of the child.
+
+    //createElement function: In an HTML document, the document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.
+
+
+    // **************************CREATING A ELEMENT AND RENDERING IT ON PAGE USING JS*******************************************
+
+    const div = document.createElement('div'); // this thing is used to create a div block since we passed 'div'.....if we passed 'h1' so h1  will be created
+    console.log(div);
+    div.className = "main"; // this set the class to that div.
+    div.id = Math.round(Math.random()*10 + 1); // this method set the id to the div
+    // if we wan to set the custom attributes form our side we can do it so
+    div.setAttribute('title' , 'generated-title') // this is the custom attribute setter to the div functionality.
+    div.style.backgroundColor = "blue"; // we added a backcol to the div 
+
+    const addText = document.createTextNode("This is custom block")
+    div.appendChild(addText); // now this is used to give a text over which all of the above properties will apply.
+
+    // o/p ----------->   <div class="main" id="8" title="generated-title"></div> 
+    
+    // this is the o/p of upper operations.
+
+    // this all will not render on the screen until we do few changes 
+
+    document.body.append(div); // this is used to append the div tag on the dom tree.
+
+    // edit the values: what if want to edit some shit so we use few methods...first we select that particular div or list-item or whatever then we apply edit functionalities over it.
+
+    const secondElement = document.querySelector('div');
+    const newElement = document.createElement('div');
+    newElement.textContent = "This is a edited version of custom block"
+    secondElement.replaceWith(newElement);
+
+    // we can also edit using outerhtml, it will generate within 1 line but again some optimization issues.
+    const firstElement = document.querySelector('div');
+    firstElement.outerHTML = '<div>This is the second edited version of custom block</div>'
+
+    document.body.append
+
+
+    // removing and element
+    const removeElement = document.querySelector('div');
+    removeElement.remove(); 
+    //element successfully removed.
+
+</script>
+</html>

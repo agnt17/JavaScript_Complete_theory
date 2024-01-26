@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="body" style="background-color: dimgrey;">
+    <div class="parent" style="display: flex; justify-content: center; align-items: center;">
+        <div class="clock" id="clock"
+            style="width: 20vw; height: 10vh; border: 2px solid black; border-radius: 10px; background-color: wheat; display: flex; justify-content: center; align-items: center;font-size: 50px;">
+        </div>
+    </div>
+</body>
+<script>
+    const clock = document.getElementById('clock');
+    const body = document.getElementsByClassName('body');
+    setInterval((()=>{
+        let date = new Date;
+        clock.innerHTML = date.toLocaleTimeString();
+        // document.body.style.backgroundColor = 'blue';
+        // document.body.style.backgroundColor = 'red';
+        
+    }),1000);
+</script>
+
+</html>

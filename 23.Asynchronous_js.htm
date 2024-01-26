@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="parent">
+        <h1 id="nam1">Click within 2 seconds to stop it.</h1>
+        <button id="stop">Stop</button>
+        <h1 id="clicked"></h1>
+    </div> -->
+    <div class="normal">
+        <h1 id="heading">Smj ja bey</h1>
+        <button class="started">Start</button>
+        <h2 id="started_clicked"></h2>
+        <button class="stopped">Stop</button>
+        <h2 id="stopped_clicked"></h2>
+    </div>
+</body>
+<script>
+    // Javascript is a single threaded and synchronous language. It is always used with context like with browser or NodeJS...so multi-threading concept is done in this lang...It was, is and will synchronous language.
+
+    // now but what is async js....so basically there are 2 types of code....
+    //1. Blocking code ------> It will stop other code or block other code until it doesn't get executed.-----> Sync concept
+    //2. Non-blocking code ------> It will not block code but will say just do other work while i am doing this.-----> Async concept
+
+    //Each thing has its usecase and we will see it.
+
+    // to know the whole function stack see the attached image just after this file.
+
+    // or visit this video -------> https://www.youtube.com/watch?v=zgt5oTD3rRc&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=37
+
+    //setTimeOut and setTimeInterval are the functions that are not directly available in js engine but these are provided by browser itself
+
+    //setTimeOut: This function is used to set the time after which the particular event will be triggered and that event will not be repeated
+    //setInterval: This function is used to set the time after which eeach passing unit of that time the event will be triggered again ans again.4
+
+    const timeout = setTimeout(() => {
+        document.querySelector('#nam1').innerHTML = "you haven't clicked so it went on"
+    }, 2000);
+
+    setInterval(() => {
+        console.log("ab yha pe mai bhadwagiri krungaa...means again again print")
+    }, 500)
+
+    // verywell but what if we want to stop it so we have to make it stop whenever some event happened.....so
+    //to do these we have clearTimeOut...
+
+    // clearTimeout(); // no this is not how it works
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(timeout);
+    })
+    const data = document.querySelector('#clicked');
+    const button = document.querySelector('#stop');
+    button.addEventListener('click', ()=>{
+        document.querySelector('#clicked').innerHTML = 'You clicked stop button'
+    })
+
+    
+
+    //for normal div id
+    document.querySelector('.started').addEventListener('click', () => {
+        setInterval(()=>{
+            document.querySelector('#started_clicked').innerHTML = "You clicked button";
+        },1000); 
+    })
+    document.querySelector('.stopped').addEventListener('click' ,() => {
+        setInterval(()=>{
+            document.querySelector('#stopped_clicked').innerHTML = "";
+        },1); 
+    })
+
+    
+
+</script>
+
+</html>
