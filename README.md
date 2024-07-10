@@ -1,0 +1,1 @@
+This is a repo that contains all the javascript that a beginner would eventually need to understand the furthur libraries like react and also backend. This complete repo only contains js codes that is taught by Mr. Hitesh Choudhary Sir and all the code is written by me itself.
