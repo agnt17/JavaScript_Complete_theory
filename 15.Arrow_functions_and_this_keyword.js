@@ -51,6 +51,4 @@ console.log(arrow3(4,5));
 console.log(arrow4(2,3));
 
 
-
-// We cant use this keyword inside arrow functions
-
+// We cant use this keyword inside arrow functions because the context of arrow functions is global context and the arrow function will only return the window object i.e {}

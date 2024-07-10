@@ -19,7 +19,7 @@
 
 //innerText: This method is used to get the text that is visible on the screen. 
 
-//textContent: This methos is used to get the text which is written on the HTML FILE it may be made visible to the Website  or may be not.
+//textContent: This method is used to get the text which is written on the HTML FILE it may be made visible to the Website  or may be not.
 
 //innerHTML: This is used to give all the HTML that is written inside that tag.
 

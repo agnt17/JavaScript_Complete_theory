@@ -10,4 +10,3 @@ let {'2': second_value} = course;  // this is called destructuring that is using
 
 console.log(second_value)
 
-i

@@ -35,7 +35,7 @@ console.log(final_arr);
 
 // how to remove all the brackets inside the array and convert it into a single array ----> flat function
 
-let arr = [1,2,3,4, [5,6,7], [8,[9]],0];
+let arr = [1,2,3,4, [5,[6,[7]]], [8,[9]],0];
 let modified_arr = arr.flat(1); // removes bracket of depth 1.
 let modified_arr2 = arr.flat(2); // removes bracket of depth 2.
 let modified_arr3 = arr.flat(Infinity); // removes all brackets of any depth.

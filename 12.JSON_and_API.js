@@ -7,7 +7,7 @@
 //In Earlier time the data from the backend that is fetched using api's is in form of XML, but now a days the data that come in form of json i.e., javascript object notation. 
 // here keys and values both are in string format.
 
-{
+const val = {
     "data": [
       {
         "type": "articles",
@@ -37,5 +37,3 @@
       }
     ]
   }
-
-  // although here it shoes 2 errors but those are actually not...

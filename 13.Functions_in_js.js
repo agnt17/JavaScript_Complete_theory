@@ -24,7 +24,7 @@ function user1(username = "Agent17"){
 }
 console.log(user1());
 
-// rest operator in functions: Sometimes what happens is that we don't know hpw many values are gonna come inside a function parameter so we use rest operator which usually do that, it stores all incoming values into an array and then we can apply any of our known operations in that array.
+// rest operator in functions: Sometimes what happens is that we don't know how many values are gonna come inside a function parameter so we use rest operator which usually do that, it stores all incoming values into an array and then we can apply any of our known operations in that array.
 
 function cartItemsAddition(...num){
     return num
