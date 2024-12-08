@@ -58,6 +58,13 @@ console.log(myArr);
 
 // seee the o/p of both...both have changed.
 
+/*
+let adiarray = new Array(1, 2, 3, 4);
 
+let adiarray2 = [1, 2, 3, 4, 5];
+console.log(adiarray2);
 
+const temp = adiarray.slice(1, 2);
+console.log(temp);
 
+*/

@@ -19,3 +19,10 @@ let val2 = 20;
 
 
 // very well....how it proceeds is that the js engine first assigns undefined to val1 and val2 ...it also assigns the values to the function definition but doesnt assigns them undefined...Basically to handle a function it creates a additional memory block and deals with that function inside it and whenever the function returns...(function always returns to global scope) the memory block get destroyed. This is how js function renders the js.
+
+let a = 1;
+let b = 2;
+
+(function good(a, b){
+    console.log(a + b);
+})(a,b);

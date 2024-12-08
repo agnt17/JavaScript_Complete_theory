@@ -1,13 +1,14 @@
+
 let myDate = new Date();
-console.log(myDate.toString());
-console.log(myDate.toISOString());
-console.log(myDate.toJSON());
-console.log(myDate.toUTCString());
-console.log(myDate.toLocaleDateString());
-console.log(myDate.toLocaleTimeString());
-console.log(myDate.toDateString());
-console.log(myDate.toTimeString());
-console.log(myDate.toString());
+console.log("1", myDate.toString()); 
+console.log("2",myDate.toISOString());
+console.log("3",myDate.toJSON());
+console.log("4",myDate.toUTCString());
+console.log("5",myDate.toLocaleDateString());
+console.log("6",myDate.toLocaleTimeString());
+console.log("7",myDate.toDateString());
+console.log("8",myDate.toTimeString());
+console.log("9",myDate.getTimezoneOffset()); //similar to 1 
 
 // if we use parenthesis after any method in js that means we are calling that method
 
@@ -26,3 +27,5 @@ console.log(Math.round(date/1000)); // for o/p in seconds
 
 
 
+// let newDate = new Date();
+// console.log(newDate);

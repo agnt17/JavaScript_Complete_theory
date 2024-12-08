@@ -67,3 +67,15 @@ console.log(c); // 3
 const [first, , third] = numbers;
 console.log(first); // 1
 console.log(third); // 3
+
+
+// let arrr1 = [1, 2, 3];
+// let arrr2 = [4, 5, 6];
+// let arrr3 = [7, 8, 9];
+
+// let arrr4  = [...arrr1, ...arrr2, ...arrr3];
+// console.log(arrr4)
+
+
+
+
