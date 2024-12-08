@@ -27,6 +27,14 @@ function chai(){
 }
 chai();// this will give a hell lot of values. u can run to check it.
 
+const user1 = {
+    "username" : "Aditya Gupta 11",
+    welcomeMessage: function(){
+        console.log(`Hello ${this.username}`)
+    }
+}
+user1.welcomeMessage();
+
 // ****************************Arrow functions****************************
 
 const arrow = () => {
@@ -48,7 +56,8 @@ console.log(arrow2(3,5));
 const arrow3 = (num1 ,num2) => {return num1 + num2;}   // method 1----> explicit return 
 const arrow4 = (num1, num2) => (num1+num2) // method 2 ---> implicit return 
 console.log(arrow3(4,5));
-console.log(arrow4(2,3));
+console.log(arrow4(2,3));   
 
 
 // We cant use this keyword inside arrow functions because the context of arrow functions is global context and the arrow function will only return the window object i.e {}
+

@@ -10,8 +10,9 @@
 //eg
 let val1 = 5 ?? 10 // o/p: 5
 let val2 = null ?? 10 // o/p : 10 
-let val3 = undefined ?? 15 // o/p : undefined
+let val3 = undefined ?? 15 // o/p : 15
 let val4 = null ?? 10 ?? 20 // o/p : 10
 
+console.log(val1, val2, val3, val4);
 
 //ternary operator -----> Syntax : Ternary ? true : false;

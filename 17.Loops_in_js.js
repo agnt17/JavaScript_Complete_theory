@@ -1,6 +1,6 @@
 // u know about basic for and while loops...
 
-// for of loop
+// for of loop : This loop is used on the iterable objects like arrays, lists, sets, etc.
 
 // let arr = [1,2,3,4,5];
 // for (const i of arr) {
@@ -31,7 +31,7 @@ for (const key in myObject) {
   console.log(myObject[key]); //through this we will get values
 }
 
-//forEach loop ----> for each loop takes a callback function that is called for each element in the array providing both the elements and the index arguments.
+//forEach loop ----> forEach is a higher-order function provided by arrays to iterate over elements. It cannot be stopped with break or continue.
 
 const coding = ["java", "cpp", "php", "Swift", "javascript"];
 // method 1 for for each loop using explicitly function definition
@@ -76,3 +76,17 @@ const values = newCoding.forEach((item) => {
 
 // on file 19
 
+//for loop
+let array = new Array(1,2,3,4,5,6,7);
+
+for(let i=0;i<array.length;i++){
+  console.log(array[i])
+}
+
+
+
+
+//for of loop
+for(let i of array){
+  console.log(i++);
+}

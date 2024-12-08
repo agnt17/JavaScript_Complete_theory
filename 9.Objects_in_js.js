@@ -29,13 +29,13 @@ obj2.email = "aba";
 console.log(obj2); // clearly after freezing the value of email doesnt changes.
 
 // how does function works in object and if we want to access the objects name using this keyword then how we gonna do that
-// (obj2.greeting = function () {
-//   console.log("Hello js user");
-// })();
+(obj2.greeting = function () {
+  console.log("Hello js user");
+})();
 
-// // (obj2.greetingtwo = function(){
-// //     console.log(`Hello js user, ${this.name}`);
-// // })();
+(obj2.greetingtwo = function(){
+    console.log(`Hello js user, ${this.name}`);
+})();
 
 // obj2.greetingtwo = function () {
 //   console.log(`Hello js user, ${this.name}`);
