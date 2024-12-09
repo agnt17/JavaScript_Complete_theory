@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="password" onmousedown="enterInput(event)" />
+    <p id="feedback"></p>
+
+    <script>
+        function enterInput(e) {
+            var flag = e.getModifierState("CapsLock");
+            if (flag) {
+                document.getElementById("feedback").innerHTML = "Caps lock is activated";
+            }
+            else {
+                document.getElementById("feedback").innerHTML = "Caps lock is off";
+            }
+        }
+    </script>
+</body>
+
+</html>

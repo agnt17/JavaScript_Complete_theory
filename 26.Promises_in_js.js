@@ -53,7 +53,7 @@ const newPromise4 = new Promise((resolve, reject) => {
   setTimeout(() => {
     let error = true;
     if (!error) {
-      resolve({ username: "Aditya", email: "2101080022@hbtu.ac.in" });
+      resolve({ username: "Aditya", email: "210108002@hbtu.ac.in" });
     } else {
       reject("Error: Something went Wrong!");
     }
@@ -133,3 +133,5 @@ consumePromise6();
 // Better readability: Promises make asynchronous code easier to read and understand.
 // Chaining: You can chain multiple asynchronous operations together.
 // Error handling: Promises provide a clear way to handle errors.
+
+

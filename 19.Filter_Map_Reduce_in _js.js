@@ -1,5 +1,5 @@
 
-// filter function in js
+// filter function in js: This fun only works with arrays. This is a higher order function that returns a new array out of original array and contains element that follows certain order. 
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 const newNums = myNums.filter((item) => {
@@ -26,6 +26,9 @@ const myArray3 = MyArray2.filter((item)=>{
 })
 console.log(myArray3)    // o/p: [ 51, 61, 71, 81, 91 ].....which is expected.
   
+let newAray = myNums.filter((item)=>{
+    console.log(item/2);
+})
 
 //Reduce function in js ----------> This function is basically is used to reduce the array into single value. It iterates over each element of the array, applying a provided callback function and accumulating the result.
 
